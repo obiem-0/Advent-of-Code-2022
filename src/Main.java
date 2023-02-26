@@ -4,9 +4,9 @@ public class Main {
         //AoCday1 aoc = new AoCday1();
         //AoCday2 aoc2 = new AoCday2();
         
-        AoCday3 aoc3 = new AoCday3();
-        aoc3.run();
-        System.out.println();
+        //AoCday3 aoc3 = new AoCday3();
+        //aoc3.run();
+       // System.out.println();
         AoCday4 aoc4 = new AoCday4();
         aoc4.run();
         //aoc.p1();
