@@ -78,9 +78,13 @@ public class AoCday5 {
                   steps1 = Integer.parseInt(steps);
 
 
-                for(int i = 0; i<steps1; i++){
+                  for(int i = 0; i<steps1; i++){
                     String s = l5.get(start1-1).get(0);
-                    l5.get(end1-1).add(0, s);
+                    if(steps1==1){
+                        l5.get(end1-1).add(0, s);
+                    }else {
+                        l5.get(end1-1).add(i, s);
+                    }
                     l5.get(start1-1).remove(0);
 
                 }
