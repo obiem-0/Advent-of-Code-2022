@@ -7,8 +7,11 @@ public class Main {
         //AoCday3 aoc3 = new AoCday3();
         //aoc3.run();
        // System.out.println();
-        AoCday4 aoc4 = new AoCday4();
-        aoc4.run();
+        //AoCday4 aoc4 = new AoCday4();
+        //aoc4.run();
+
+        AoCday5 aoc5 = new AoCday5();
+        aoc5.run();
         //aoc.p1();
         // aoc.p2();
         // aoc2.p1();
