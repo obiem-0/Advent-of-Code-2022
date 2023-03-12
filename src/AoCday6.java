@@ -21,7 +21,7 @@ public class AoCday6 {
             int total = 0;
             int countOne = 0;
 
-            System.out.println(content.length());
+            System.out.println( "Part 1 Answer: " + content.length());
 
             for(int i = 0; i<content.length(); i++) {
                 total=i;
@@ -43,7 +43,7 @@ public class AoCday6 {
                 }
             }
 
-        System.out.println(total+14);
+        System.out.println("Part 2 Answer: " + (total + 14));
 
         // a count to check when we have 4 characters, the count restarts as soon as it finds same so we can stop
         //a count to check how many characters we have been through

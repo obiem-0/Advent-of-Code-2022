@@ -1,15 +1,19 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
+
+
 
 public class AoCday2 {
 
     public AoCday2(){
+
+    }
+    
+
+    public void run() {
+
+  
         //X = lose
         //Y = draw
         //Z = win
@@ -42,16 +46,12 @@ public class AoCday2 {
             //System.out.println(checkPlay(data.charAt(0)) + " " + data.charAt(1) + " " + checkScoreOfMatch(userPlay, compPlay) + " " + roundScore +  " " + outCome);
             //System.out.println(checkPlay(data.charAt(0)) + " " + checkOutcome(data.charAt(1)) + " " + userPlay1 + " " + checkScoreOfMatch(userPlay1, compPlay) + " " + roundScore);
         }
-        System.out.println("Part 1: " + totalScore);//Part 1
-        System.out.println("Part 2: " + playerScore);//Part 2
+        System.out.println("Part 1 Answer: " + totalScore);//Part 1
+        System.out.println("Part 2 Answer: " + playerScore);//Part 2
 
         myReader.close();
 
     }
-
-
-
-
 
     //0 = loss
     //3 = draw

@@ -94,7 +94,9 @@ public class AoCday5 {
             }
 
             for(int i  = 0; i<l5.size(); i++){
-                System.out.print(l5.get(i).get(0));
+                System.out.print(
+                    l5.get(i).get(0)
+                    );
             }
 
 
