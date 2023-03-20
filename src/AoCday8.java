@@ -57,32 +57,40 @@ public class AoCday8 {
         System.out.println("---------");
 
         //to compare the numbers
+        int score = 0;
         for(int h = 1; h<first.size()-1;h++) {
             for (int i = 1; i < ch - 1; i++)  {
+                int totalCount= 1;
                 int check = 0;
                 int counted = 0;
+                int valid = 0;
                 int main = convert(first.get(h).charAt(i));
                 //to the left direction
                 for(int l = i-1; l>=0;l--){
                    if(main>convert(first.get(h).charAt(l))){
                        check++;
+                       valid++;
                        System.out.println(main +" is greater than "+ convert(first.get(h).charAt(l)));
                     }else{
                        check  = 0;
+                       valid++;
                        System.out.println(main +" is not greater than "+ convert(first.get(h).charAt(l)));
                        break;
                    }
                 }
 
                 counted+=check;
-
+                totalCount*=valid;
+                valid=0;
                 //to the right direction
                 for(int k = i+1; k<ch;k++){
                     if(main>convert(first.get(h).charAt(k))){
                         check++;
+                        valid++;
                         System.out.println(main +" is greater than "+ convert(first.get(h).charAt(k)));
                     } else{
                         check = 0;
+                        valid++;
                         System.out.println(main +" is not greater than "+ convert(first.get(h).charAt(k)));
                         break;
                     }
@@ -90,29 +98,36 @@ public class AoCday8 {
                 }
 
                 counted+=check;
-
+                totalCount*=valid;
+                valid= 0;
                 //up
                 for(int l=h-1; l>=0;l--){
                     if(main>convert(second.get(i).charAt(l))){
                         check++;
+                        valid++;
                         System.out.println(main +" is greater than "+ convert(second.get(i).charAt(l)));
                     }else{
                         check  = 0;
+                        valid++;
                         System.out.println(main +" is not greater than "+ convert(second.get(i).charAt(l)));
                         break;
                     }
                 }
 
                 counted+=check;
+                totalCount*=valid;
+                valid = 0;
 
                 //down
 
                 for(int k = h+1; k<ch;k++){
                     if(main>convert(second.get(i).charAt(k))){
                         check++;
+                        valid++;
                         System.out.println(main +" is greater than "+ convert(second.get(i).charAt(k)));
                     } else{
                         check = 0;
+                        valid++;
                         System.out.println(main +" is not greater than "+ convert(second.get(i).charAt(k)));
                         break;
                     }
@@ -120,16 +135,23 @@ public class AoCday8 {
                 }
 
                 counted+=check;
+                totalCount*=valid;
                 //if greater than zero, it means it was visible in at least one direction
                 if(counted>0){
                     count++;
                 }
+                System.out.println(totalCount);
 
                 System.out.println("------");
+                if(totalCount>score){
+                    score = totalCount;
                 }
+            }
 
         }
+
         System.out.println("Total number of visible trees: "+count);
+        System.out.println("Highest scenic score of any possible tree: "+score);
 
     }
 
